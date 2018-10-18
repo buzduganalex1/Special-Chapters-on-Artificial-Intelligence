@@ -1,5 +1,5 @@
 source("Functions.R")
-1
+
 x <- readinteger()
 
 length(x)
