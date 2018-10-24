@@ -15,3 +15,7 @@ readinteger <- function()
 
     return(vec)
 }
+
+showGraphic <- function(x){
+    
+}
