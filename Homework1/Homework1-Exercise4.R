@@ -18,7 +18,7 @@ sort(x, FALSE)
 print(maxValue)
 print(minValue)
 print(meanValue)
-print(medianValue)
+print(medianValue)1
 print(standardDeviation)
 print(standardization)
 
