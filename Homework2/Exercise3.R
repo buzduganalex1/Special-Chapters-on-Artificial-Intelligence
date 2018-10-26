@@ -1,16 +1,14 @@
+require(graphics)
+
 u <- 0
 q <- c(0.1, 1, 10)
 
-range <- seq(-20, 20)
+for(i in q){
+    title <- paste("Normal distribution for", i)
 
-require(graphics)
+    pdf(paste(title,".pdf"),width=6,height=4,paper='special') 
+    
+    plot(dnorm(seq(-20, 20), 0, i), main = title, col = "red", lwd = 2, type = "l")
 
-x <- range
-
-## Using "log = TRUE" for an extended range :
-par(mfrow = c(2,1))
-plot(function(x) dnorm(x, log = TRUE), -60, 50,
-     main = "log { Normal density }")
-curve(log(dnorm(x)), add = TRUE, col = "red", lwd = 2)
-mtext("dnorm(x, log=TRUE)", adj = 0)
-mtext("log(dnorm(x))", col = "red", adj = 1)
+    dev.off()
+}

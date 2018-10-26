@@ -1,3 +1,3 @@
 source("Functions.R")
 
-showGraph(2,5)
+showGraph(1, 10)

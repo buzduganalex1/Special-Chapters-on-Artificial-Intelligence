@@ -1,7 +1,13 @@
-# Generate a table with 1000 elements from a uniform distribution -10 10
-# Table 1000x1000
-# n>=1
-# Media pe fiecare coloana din tablou
+source("Functions.R")
 
-# b) 4 apeluri cu n = 1, 5, 10, 100 
-# look into ?hist
+for(i in c(1, 5, 10, 100)){
+   title <- paste("Histogram ", i)
+    
+    pdf(paste(title,".pdf"), width=6, height=4, paper='special') 
+   
+    vectorMeans <- CLT(i)
+    
+    hist(vectorMeans, main=title)
+
+    dev.off()
+}
