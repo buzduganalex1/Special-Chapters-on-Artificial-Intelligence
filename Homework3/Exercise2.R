@@ -7,7 +7,9 @@ exercise2 <- function(m, a, b, xmin, xmax){
 
     g <- lm(y~x)
     
-    summary(g)
+    plot(y~x) 
+
+    abline(g, col="red")
 }
 
-exercise2(10, 2, 3, -5, 5)
+exercise2(100, 3, 5, -5, 5)
