@@ -7,17 +7,17 @@ exercise3 <- function(m, a, b, xmin, xmax, sigma){
 
     g <- lm(y~x)
 
-    a <-coef(g)[1];
+    intercept <-coef(g)[1];
 
-    b <- coef(g)[2];
+    slope <- coef(g)[2];
     
     prd<-predict(g, newdata=data.frame(x, y), interval="confidence", level = 0.95,type="response");
 
-    result <- list(data.frame(a = a, b = b), prediction = prd)
-  
-    plot(y~x) 
+    #newY <- intercept + slope * x
 
-    abline(g, col="red")
+    plot(x, y)
+
+    abline(intercept, slope, col="red")
 }
 
 savePlots <- function(m, xmin, xmax, sigma, plotName){
