@@ -6,10 +6,19 @@ exercise2 <- function(m, a, b, xmin, xmax){
     y <- a + b * x + e
 
     g <- lm(y~x)
-    
-    plot(y~x) 
 
-    abline(g, col="red")
+    a <-coef(g)[1];
+
+    b <- coef(g)[2];
+    
+    prd<-predict(g, newdata=data.frame(x, y), interval="confidence", level = 0.95,type="response");
+
+    result <- list(data.frame(a = a, b = b), prediction = prd)
+    
+    return(result)
 }
 
-exercise2(100, 3, 5, -5, 5)
+result <- exercise2(100, 3, 5, -5, 5)
+
+print(result[1])
+print(result[2])

@@ -5,7 +5,15 @@ exercise1 <- function(m, a, b, xmin, xmax, sigma){
 
     y <- a + b * x + e
     
-    plot(y~x) 
+    result <- list(x = x, y = y)
+    
+    return(result)
 }
 
-exercise1(100, 3, 5, -200, 200, 1)
+result <- exercise1(100, 3, 5, -200, 200, 1)
+
+dataFrame <- data.frame(x = result[1], y = result[2])
+
+print(dataFrame)
+
+plot(dataFrame)
