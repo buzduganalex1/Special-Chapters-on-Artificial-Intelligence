@@ -43,6 +43,7 @@
 # # test <- t(x) * c(x)
 
 # # test
+dataset = read.table("https://profs.info.uaic.ro/~cgatu/csia/res/house.dat", header=TRUE)
 
 test <- dataset[, c("FLR", "ST", "LOT", "CON", "GAR", "L2")]
 
@@ -71,3 +72,8 @@ print(rSquared)
 print(rSquaredAdj)
 
 print(Cp)
+
+
+testList[1]
+
+# result[1] <- append(result[1], list(rss, rSquared, rSquaredAdj, Cp, dataset)
