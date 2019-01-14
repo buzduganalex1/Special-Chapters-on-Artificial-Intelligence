@@ -1,3 +1,4 @@
 ## Alegerea temei pana pa 15 noiembrie
 
-## Predarea nu stiu
+## Predarea 1/14/2019
+
